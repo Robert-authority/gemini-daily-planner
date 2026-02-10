@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon AI Jadwal</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <canvas id="fx"></canvas>
+
+  <div class="container">
+    <div class="header">
+      <h1>Neon AI Jadwal</h1>
+      <p>Tulis jadwal pakai bahasa biasa. Gemini yang rapihin jadi jadwal.</p>
+    </div>
+
+    <div class="card">
+      <textarea id="inputText" placeholder="Contoh: Besok jam 7 olahraga, jam 10 belajar JS, jam 3 tugas PPL"></textarea>
+
+      <div class="actions">
+        <button class="btn-primary" onclick="kirim()">Simpan Jadwal</button>
+        <button class="btn-ghost" onclick="loadJadwal()">Refresh</button>
+      </div>
+
+      <a class="logout" href="/logout">Logout</a>
+
+      <div class="note">
+        Tips: kamu bisa tulis banyak jadwal sekaligus dalam 1 kalimat.
+      </div>
+    </div>
+
+    <div class="section-title">📅 Daftar Jadwal</div>
+    <div id="jadwalList"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

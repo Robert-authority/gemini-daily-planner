@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Neon AI Jadwal</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+
+<body>
+  <canvas id="fx"></canvas>
+
+  <div class="container">
+    <div class="header">
+      <h1>Neon AI Jadwal</h1>
+      <p>Masukkan password untuk masuk.</p>
+    </div>
+
+    <div class="card">
+      <form method="POST" class="login-form">
+        <input type="password" name="password" placeholder="Password..." required />
+
+        <button class="btn-primary" type="submit">Login</button>
+
+        {% if error %}
+          <div class="error-box">{{ error }}</div>
+        {% endif %}
+      </form>
+
+      <div class="note">
+        Ini dibuat private. Hanya kamu yang bisa akses.
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
